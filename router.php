@@ -36,7 +36,7 @@ function route($route, $path_to_include){
     exit();
   }
   if( count($route_parts) != count($request_url_parts) ){ return; }  
-  $parameters = [];
+  $parameters = array();
   for( $__i__ = 0; $__i__ < count($route_parts); $__i__++ ){
     $route_part = $route_parts[$__i__];
     if( preg_match("/^[$]/", $route_part) ){
